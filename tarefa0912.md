@@ -26,8 +26,7 @@
 |CE07|cargaHoraria <= 0|I|
 |CE08|cargaHoraria > 0|V|
 |CE09|faltas < 0|I|
-|CE10|faltas >= 0 && faltas <= cargaHoraria|V|
-|CE11|faltas > cargaHoraria|I|
+|CE10|faltas >= 0|V|
 
 Onde:
 **CE** = Classe de Equivalência, seguido de um número sequencial;
@@ -41,7 +40,13 @@ Onde:
 |CT01|-2|Valor Inválido|CE1|
 |CT02|2|Valor Válida|CE2|
 |CT03|11|Valor Inválida|CE3|
-
+|CT04|-4|Valor Inválido|CE4|
+|CT05|8|Valor Válida|CE5|
+|CT06|40|Valor Inválida|CE6|
+|CT07|0|Valor Inválida|CE7|
+|CT08|40|Valor Válida|CE8|
+|CT09|-7|Valor Inválida|CE9|
+|CT10|4|Valor Válida|CE10|
 
 Onde:
 **CT** = Caso de Teste, seguido de um valor sequencial;
