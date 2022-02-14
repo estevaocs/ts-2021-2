@@ -16,6 +16,7 @@
    1. Geração do grafo de causa e efeito para representar este cenário.
       1. Anexar a este arquivo a imagem do grafo.
    2. Geração da tabela de decisão para representar o cenário.
+
 |Condição / Entradas| 1 | 2 | 3 | 4 |	5 | 6 |	7 |	8 |
 |--|--|--|--|--|--|--|--|--|
 |Sexo|Masculino|Masculino|Masculino|Masculino|Feminino|Feminino|Feminino|Feminino|
