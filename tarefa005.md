@@ -16,7 +16,14 @@
    1. Geração do grafo de causa e efeito para representar este cenário.
       1. Anexar a este arquivo a imagem do grafo.
    2. Geração da tabela de decisão para representar o cenário.
-      1. Editar este arquivo e adicionar a tabela de decisão.
+|Condição / Entradas| 1 | 2 | 3 | 4 |	5 | 6 |	7 |	8 |
+|--|--|--|--|--|--|--|--|--|
+|Sexo|Masculino|Masculino|Masculino|Masculino|Feminino|Feminino|Feminino|Feminino|
+|Idade (anos)|< 25|< 25|> 25|> 25|< 25|< 25|> 25|> 25|
+|Estado Civil|Solteiro|Casado|Solteiro|Casado|Solteiro|Casado|Solteiro|Casado|
+|Ações / Saidas|--|--|--|--|--|--|--|--|							
+|Destconto (%)|0|5|10|15|5|10|15|20|
+
    3. Geração do conjunto de casos de teste suficientes para cobrir todos os cenários, constantes do grafo e da tabela de decisão.
       1. Editar este arquivo e adicionar a tabela com os casos de teste, conforme exemplos disponibilizados em tarefas anteriores.
    4. Em relação aos casos de teste, considere o valor do seguro de R$ 2.000,00 (Dois mil reais). Desta forma, o valor esperado, do resultado do caso de teste, deve ser o valor líquido a ser pago. Ou seja, o prêmio deduzido do valor correspondente ao percentual do desconto obtido pelo cliente.
@@ -25,3 +32,4 @@ INSTRUÇÕES:
 2. Local de Entrega: Repositório pessoal, no github. O arquivo a ser entregue é este mesmo, editado com a inclusão dos dados solicitados.
 3. Data da Entrega: 14/02/2022, as 23h59min.
 4. Critério de Aceitação: Arquivo entregue com os dados solicitados.
+
