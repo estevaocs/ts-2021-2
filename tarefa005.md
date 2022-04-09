@@ -15,6 +15,10 @@
 2. Solicita-se:
    1. Geração do grafo de causa e efeito para representar este cenário.
       1. Anexar a este arquivo a imagem do grafo.
+   <div align=center>
+     <img src="tarefa005.png">
+   </div>
+
    2. Geração da tabela de decisão para representar o cenário.
 
 |Condição / Entradas| 1 | 2 | 3 | 4 |	5 | 6 |	7 |	8 |
@@ -24,6 +28,12 @@
 |Estado Civil|Solteiro|Casado|Solteiro|Casado|Solteiro|Casado|Solteiro|Casado|
 |Ações / Saidas|--|--|--|--|--|--|--|--|							
 |Destconto (%)|0|5|10|15|5|10|15|20|
+
+   <div align=center>
+     <img src="tabela_decisao.png">
+   </div>
+
+
 
    3. Geração do conjunto de casos de teste suficientes para cobrir todos os cenários, constantes do grafo e da tabela de decisão.
       1. Editar este arquivo e adicionar a tabela com os casos de teste, conforme exemplos disponibilizados em tarefas anteriores.
