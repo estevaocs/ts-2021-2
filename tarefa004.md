@@ -9,29 +9,56 @@
 3. Pede-se a definição do conjunto de casos de testes necessários para o teste do mesmo cenário descrito na tarefa 003. Estes casos de teste deverão ser criadas a partir das diretrizes definidas pelo critério funcional "Análise do Valor Limte".
 4. O Conjunto de casos de testes derivado deve seguir o seguinte padrão:
 
+a) Os três primeiros casos de teste, visam validar o valor imediatamente inferior ao limite inferior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+
 |CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
 |--|--|--|--|
-|CT01|-2|Valor Inválido|CE1|
-|CT02|1|Valor Válido|CE02|
-|CT03|10|Valor Válido|CE02|
-|CT04|11|Valor Inválido|CE03|
-|CT05|1, -1|Valor Inválido|CE04|
-|CT06|1, 1|Valor Válido|CE05|
-|CT07|1, 10|Valor Válido|CE05|
-|CT08|1, 11|Valor Inválido|CE06|
-|CT09|1, 10,-1|Valor Inválido|CE07|
-|CT10|1, 10, 0|Valor Inválido|CE07|
-|CT11|1, 10, 1|Valor Válido|CE08|
-|CT12|1, 10, 1, -1|Valor Inválido|CE09|
-|CT13|1, 10, 10, 11|Valor Inválido|CE11|
-|CT14|10, 10, 100, 26|Reprovado por Falta|CE10|
-|CT15|10, 10, 100, 25|Aprovado|CE10|
-|CT16|10, 10, 100, 24|Aprovado|CE10|
-|CT17|2, 2, 100, 24|Reprovado por Média|CE10|
-|CT18|3, 3, 100, 24|Recuperação|CE10|
-|CT19|4, 4, 100, 24|Recuperação|CE10|
-|CT20|5, 5, 100, 24|Recuperação|CE10|
-|CT21|6, 6, 100, 24|Aprovado|CE10|
+|CT01|-0,01,7.00,64,8|"Valores Inválidos|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE38|
+|CT02|7.00,-0.01,32,8|"Valores Inválidos|CE02,CE04,CE06,CE10,CE13,CE14,CE16,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE38|
+|CT03|7.00,5.00,64,-1|"Valores Inválidos|CE02,CE04,CE06,CE10,CE13,CE14,CE16,CE20,CE23,CE24,CE27,CE29,CE30,CE32,CE37,CE38|
+
+b) Os próximos três casos de teste, visam validar o limite inferior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|0,00,7.00,64,8|"Recuperação"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE41|
+|CT04|7.00,0.00,32,8|"Recuperação"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE41|
+|CT05|7.00,5.00,64,0|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+
+c) Os próximos três casos de teste, visam validar o valor imediatamente superior ao limite inferior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|0,01,7.00,64,8|"Recuperação"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE41|
+|CT04|7.00,0,01,32,8|"Recuperação"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE41|
+|CT05|7.00,5.00,64,1|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+
+d) Os próximos três casos de teste, visam validar o comportamento da variável faltas em relação ao percentual de 25% da carga horária. Desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|5,00,7.00,64,15|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT04|5.00,7.00,64,16|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT05|5.00,7.00,64,17|"Reprovado por Faltas"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE34,CE37,CE39|
+
+d) Os três primeiros casos de teste, visam validar o valor imediatamente inferior ao limite superior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|9,99,7.00,64,15|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT04|5.00,9.99,64,16|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT05|5.00,7.00,64,63|"Reprovado por Faltas"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE34,CE37,CE39|
+
+e) Os três primeiros casos de teste, visam validar o limite superior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|10,00,7.00,64,15|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT04|5.00,10.00,64,16|"Aprovado"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE42|
+|CT05|5.00,7.00,64,64|"Reprovado por Faltas"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE34,CE37,CE39|
+
+f) Os três primeiros casos de teste, visam validar o valor imediatamente superior ao limite superior das variáveis **nota1**, **nota2** e **faltas**, desta forma teremos:
+|CT|Valor de Entrada|Resultado Esperado|Classe Equivalência|
+|--|--|--|--|
+|CT03|10,01,7.00,64,15|"Valores Inválidos"|CE02,CE04,CE08,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE38|
+|CT04|5.00,10.01,64,16|"Valores Inválidos"|CE02,CE04,CE06,CE10,CE13,CE14,CE18,CE20,CE23,CE24,CE27,CE29,CE30,CE33,CE37,CE38|
+|CT05|5.00,7.00,64,65|"Valores Inválidos"|CE02,CE04,CE06,CE10,CE13,CE14,CE17,CE20,CE23,CE24,CE27,CE29,CE35,CE34,CE37,CE38|
+
 Onde:
 **CT** = Caso de Teste, seguido de um valor sequencial;
 **Valor de entrada** é o valor informado para a variável;
